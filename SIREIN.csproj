@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2ACFF37B-72FD-4C93-A312-B5AFEECE596E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SIREIN</RootNamespace>
+    <AssemblyName>SIREIN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.6.10.8\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.Entity.6.10.8\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientesFrms\Alta_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesFrms\Alta_Clientes.Designer.cs">
+      <DependentUpon>Alta_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreditosFrms\Ver_CreditoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreditosFrms\Ver_CreditoFrm.Designer.cs">
+      <DependentUpon>Ver_CreditoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Model\Clientes.cs" />
+    <Compile Include="Data_Model\Creditos.cs" />
+    <Compile Include="Data_Model\Interacciones.cs" />
+    <Compile Include="Data_Model\Producto_Entradas.cs" />
+    <Compile Include="Data_Model\Producto_Salidas.cs" />
+    <Compile Include="Data_Model\Tickets.cs" />
+    <Compile Include="Data_Model\Productos.cs" />
+    <Compile Include="Data_Model\SIREINDbContext.cs" />
+    <Compile Include="Data_Model\Sells.cs" />
+    <Compile Include="Data_Model\V_ClienteCredito.cs" />
+    <Compile Include="Inventarios_Form\Alta_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios_Form\Alta_Producto.Designer.cs">
+      <DependentUpon>Alta_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios_Form\Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios_Form\Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios_Form\Inventarios_Minimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios_Form\Inventarios_Minimo.Designer.cs">
+      <DependentUpon>Inventarios_Minimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios_Form\Mod_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios_Form\Mod_Producto.Designer.cs">
+      <DependentUpon>Mod_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_Forms\Cantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_Forms\Cantidad.Designer.cs">
+      <DependentUpon>Cantidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_Forms\Cobrar_Credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_Forms\Cobrar_Credito.Designer.cs">
+      <DependentUpon>Cobrar_Credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_Forms\Cobrar_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_Forms\Cobrar_Form.Designer.cs">
+      <DependentUpon>Cobrar_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_Forms\FrmGranel_price.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_Forms\FrmGranel_price.Designer.cs">
+      <DependentUpon>FrmGranel_price.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_Forms\Producto\BusquedaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_Forms\Producto\BusquedaProducto.Designer.cs">
+      <DependentUpon>BusquedaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_Forms\Reportes\SellReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_Forms\Reportes\SellReport.Designer.cs">
+      <DependentUpon>SellReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_Forms\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_Forms\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClientesFrms\Alta_Clientes.resx">
+      <DependentUpon>Alta_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreditosFrms\Ver_CreditoFrm.resx">
+      <DependentUpon>Ver_CreditoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios_Form\Alta_Producto.resx">
+      <DependentUpon>Alta_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios_Form\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios_Form\Inventarios_Minimo.resx">
+      <DependentUpon>Inventarios_Minimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios_Form\Mod_Producto.resx">
+      <DependentUpon>Mod_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_Forms\Cantidad.resx">
+      <DependentUpon>Cantidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_Forms\Cobrar_Credito.resx">
+      <DependentUpon>Cobrar_Credito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_Forms\Cobrar_Form.resx">
+      <DependentUpon>Cobrar_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_Forms\FrmGranel_price.resx">
+      <DependentUpon>FrmGranel_price.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_Forms\Producto\BusquedaProducto.resx">
+      <DependentUpon>BusquedaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_Forms\Reportes\SellReport.resx">
+      <DependentUpon>SellReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_Forms\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ventas_Forms\Credito\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
